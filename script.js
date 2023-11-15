@@ -79,7 +79,14 @@
   }
 }
     function collectionmovies(movie2){
-    return movie2.filter(movie1=>movie1.rating==="pg")
+     const a=[]
+    movie2.filter(movie1=>{
+      if(movie1.rating=="pg"){
+        a.push(movie1.rating)
+
+      }
+    })
+    return a;
    }
   
  const movie2=[
@@ -89,6 +96,12 @@
  ];
  const pgmovie=collectionmovies(movie2)
 console.log(pgmovie);
+
+
+
+
+
+
  
  class Movie4{
   constructor(title,studio,rating="PG"){
